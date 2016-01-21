@@ -1,0 +1,11 @@
+body {
+  background: #C9C4C4;
+}
+
+.main-content img.pepe {
+	display: block;
+}
+
+.start.cursor-not-allowed {
+	cursor: not-allowed;
+}

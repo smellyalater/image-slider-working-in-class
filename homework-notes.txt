@@ -1,0 +1,25 @@
+I wrapped everything up into functions.  
+
+
+• Update the code so that adding another image on the page (that should not be in the image slider) doesn't break the code.
+
+	I added the class .img-slider to the images within the slider and changed the js accordingly using that class as a selector.  I could have changed the jquery selectors to '.header img' too but I didn't.
+
+
+
+
+• Disable the click handler when it's looping so that you can't click to advance the image while it's looping.
+
+	Added $('.slider-img').off('click'); to the startButtonClick function to unbind the image click handler while the slider is autoplaying. 
+
+
+• Clicking play increases the speed. Fix it! OR hide the "play" button when it's playing.
+
+	Added $('.slider-img').off('click'); to unbind the start button click handler while the slider is autoplaying. 
+
+	I tried getting fancy and adding some styling to the start while it was autoplaying (cursor: not-allowed) and also disable the start button using the html property. I tried doing this by adding it into the "startButtonClick" function - it worked fine.  
+
+	I then  reversed all of that in the "stopButtonClick" function but the removal of the styling and un-disabling the start button didn't work.  I tried it a few different ways - styling inline with .css('cursor', 'not-allowed') and then adding a class with cursor: not-allowed;  I was using .prop('disabled', true); to disable the start button and prop('disabled', false); to enable it but that didn't seem to work either.  Any thoughts?
+
+	As it stands now, it satisfies all of the minimum requirments.  
+
